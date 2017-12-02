@@ -4,22 +4,55 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 
-	public int health = 1;
+	public int health = 3;
+	public bool invulnerable = false;
+
+	public int WebTurnsLeft = 0;
+	private GameObject web;
+	public int MaxTurnsInWeb = 100;
+	private int toWebSpeed = 4;
+
+	private Rigidbody2D rigidbody2d;
+
 	
-	
-	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		rigidbody2d = GetComponent<Rigidbody2D>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	
+	void FixedUpdate () {
+		if (WebTurnsLeft != 0)
+		{
+			WebTurnsLeft -= 1;
+			Vector2 webPos = Vector2.MoveTowards(rigidbody2d.position, web.transform.position, toWebSpeed * Time.fixedDeltaTime);
+			rigidbody2d.MovePosition(webPos);
+		}
 	}
 
 	
-	public bool isAlive()
+	protected void reduceHealth()
 	{
-		return health > 0;
+		if (invulnerable) return;
+		health -= 1;
+	}
+
+	
+	private void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.tag == "Enemy")
+		{
+			reduceHealth();
+		}
+	}
+
+
+	public void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "Web")
+		{
+			WebTurnsLeft = MaxTurnsInWeb;
+			web = other.gameObject;
+		}
 	}
 }

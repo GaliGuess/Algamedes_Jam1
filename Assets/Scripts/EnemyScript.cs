@@ -9,7 +9,7 @@ public class EnemyScript : MonoBehaviour
 	public float speed;
 	public float range_around_checkpoint;
 
-	public int current = 0;
+	public int curr_dest = 0;
 	public bool backwards;
 
 	private Rigidbody2D rigidbody2d;
@@ -21,12 +21,12 @@ public class EnemyScript : MonoBehaviour
 	
 	void FixedUpdate ()
 	{
-		if (!closeToCheckpoint(transform.position, checkpoints[current].position))
+		if (!closeToCheckpoint(transform.position, checkpoints[curr_dest].position))
 		{
-			Vector2 pos = Vector2.MoveTowards(transform.position, checkpoints[current].position, speed * Time.fixedDeltaTime);
+			Vector2 pos = Vector2.MoveTowards(transform.position, checkpoints[curr_dest].position, speed * Time.fixedDeltaTime);
 			rigidbody2d.MovePosition(pos);
 		}
-		else current = nextCheckpoint(current);
+		else curr_dest = nextCheckpoint(curr_dest);
 	}
 
 	
