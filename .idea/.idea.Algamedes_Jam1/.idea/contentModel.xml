@@ -38,6 +38,7 @@
           <e p="FauxGravityBody.cs" t="Include" />
           <e p="MazeController.cs" t="Include" />
           <e p="PlayerScript.cs" t="Include" />
+          <e p="Rotator.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

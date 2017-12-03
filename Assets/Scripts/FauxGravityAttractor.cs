@@ -16,15 +16,17 @@ public class FauxGravityAttractor : MonoBehaviour {
 	public bool gravityDecreasing = false;
 	
 	
-	public void Attract(Transform body, bool onlyRotation = false)
+	public void Attract(Transform body, bool gravity_on = true, bool rotation_on = true)
 	{
 		Vector2 gravityUp = (body.position - transform.position).normalized;
 		Vector2 bodyUp = body.up;
 		
-		if (!onlyRotation) body.GetComponent<Rigidbody2D>().AddForce(gravityUp * GRAVITY);
-		
-		Quaternion targetRotation = Quaternion.FromToRotation(bodyUp, gravityUp) * body.rotation;
-		body.rotation = Quaternion.Slerp(body.rotation, targetRotation, SPEED * Time.deltaTime);
+		if (gravity_on) body.GetComponent<Rigidbody2D>().AddForce(gravityUp * GRAVITY);
+		if (rotation_on)
+		{
+			Quaternion targetRotation = Quaternion.FromToRotation(bodyUp, gravityUp) * body.rotation;
+			body.rotation = Quaternion.Slerp(body.rotation, targetRotation, SPEED * Time.deltaTime);
+		}
 	}
 	
 	

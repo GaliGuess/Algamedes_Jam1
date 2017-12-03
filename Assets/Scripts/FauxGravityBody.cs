@@ -7,7 +7,9 @@ public class FauxGravityBody : MonoBehaviour
 	public FauxGravityAttractor attractor;
 	private Rigidbody2D myRigidBody2D;
 	private Transform myTransform;
-	public bool onlyRotation; // if true the attractor's body will not be pulled "up" or "down" by the attractor 
+	
+	public bool gravity = true;
+	public bool rotation = true;
 	
 	private float GRAVITY_OFF = 0f;
 	
@@ -15,7 +17,11 @@ public class FauxGravityBody : MonoBehaviour
 	void Start ()
 	{
 		myRigidBody2D = GetComponent<Rigidbody2D>();
-		myRigidBody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+		
+		if (!rotation)
+		{
+			myRigidBody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+		}
 		myRigidBody2D.gravityScale = GRAVITY_OFF;
 		myTransform = transform;
 	}
@@ -23,6 +29,6 @@ public class FauxGravityBody : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		attractor.Attract(myTransform, onlyRotation);
+		attractor.Attract(myTransform, gravity, rotation);
 	}
 }
