@@ -12,19 +12,19 @@ public class EnemyScript : MonoBehaviour
 	public int curr_dest = 0;
 	public bool backwards;
 
-	private Rigidbody2D rigidbody2d;
+	private Transform myTransform;
 	
 	void Start ()
 	{
-		rigidbody2d = GetComponent<Rigidbody2D>();
+		myTransform = GetComponent<Transform>();
 	}
 	
 	void FixedUpdate ()
 	{
 		if (!closeToCheckpoint(transform.position, checkpoints[curr_dest].position))
 		{
-			Vector2 pos = Vector2.MoveTowards(transform.position, checkpoints[curr_dest].position, speed * Time.fixedDeltaTime);
-			rigidbody2d.MovePosition(pos);
+			Vector2 pos = Vector3.MoveTowards(transform.position, checkpoints[curr_dest].position, speed * Time.fixedDeltaTime);
+			myTransform.position = pos;
 		}
 		else curr_dest = nextCheckpoint(curr_dest);
 	}

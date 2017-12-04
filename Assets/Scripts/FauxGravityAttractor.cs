@@ -13,6 +13,10 @@ public class FauxGravityAttractor : MonoBehaviour {
 	
 	
 	public void Attract(Transform body, bool gravity_on = true, bool rotation_on = true)
+	/**
+	 * This should be called by the FauxGravityBody so it will be pulled to the attractor.
+	 * Use the boolean variables to control if the body will be affected by gravity\rotation of the attractor.
+	 */
 	{
 		Vector2 gravityUp = (body.position - transform.position).normalized;
 		Vector2 bodyUp = body.up;
@@ -27,6 +31,9 @@ public class FauxGravityAttractor : MonoBehaviour {
 	
 	
 	public void changeGravityDirection()
+	/**
+	 * Changes the gravity direction in\out.
+	 */
 	{
 		if (compare(GRAVITY, MAX_GRAVITY))
 		{
@@ -40,6 +47,9 @@ public class FauxGravityAttractor : MonoBehaviour {
 
 
 	private bool compare(float x, float y)
+	/**
+	 * Compares floats to a epsilon precision.
+	 */
 	{
 		float tolerance = 1E-07f;
 		return Math.Abs(x - y) < tolerance;
