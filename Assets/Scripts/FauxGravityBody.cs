@@ -10,10 +10,12 @@ public class FauxGravityBody : MonoBehaviour
 	
 	public bool gravity = true;
 	public bool rotation = true;
+	public float speedLimit = 3.25f;
+	public float currentSpeed;
 	
 	private float GRAVITY_OFF = 0f;
 	
-	// Use this for initialization
+	
 	void Start ()
 	{
 		myRigidBody2D = GetComponent<Rigidbody2D>();
@@ -30,5 +32,24 @@ public class FauxGravityBody : MonoBehaviour
 	void FixedUpdate ()
 	{
 		attractor.Attract(myTransform, gravity, rotation);
+		if (myRigidBody2D.velocity.magnitude > speedLimit) limitSpeed_Strict();
+		currentSpeed = myRigidBody2D.velocity.magnitude;
+	}
+
+
+	void limitSpeed_Strict()
+	{
+		Vector2 normalizedVelocity = myRigidBody2D.velocity.normalized;
+		myRigidBody2D.velocity = normalizedVelocity * speedLimit;
+	}
+	
+	
+	void LimitSpeed_Natural()
+	{
+		float breakSpeed = myRigidBody2D.velocity.magnitude - 2*speedLimit;
+		Vector2 normalizedVelocity = myRigidBody2D.velocity.normalized;
+		Vector2 brakeForce = normalizedVelocity * breakSpeed;
+		myRigidBody2D.AddForce(brakeForce);
+
 	}
 }

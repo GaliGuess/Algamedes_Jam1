@@ -47,8 +47,7 @@ public class MazeController : MonoBehaviour
 
 	void changeGravity()
 	{
-//		attractor.changeGravityDirection();
-		attractor.changeGravityDirection2();
+		attractor.changeGravityDirection();
 	}
 
 	KeyCode currentKey(KeyCode key)
