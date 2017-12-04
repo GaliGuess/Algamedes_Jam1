@@ -27,8 +27,8 @@ public class FauxGravityBody : MonoBehaviour
 		myRigidBody2D.gravityScale = GRAVITY_OFF;
 		myTransform = transform;
 	}
+
 	
-	// Update is called once per frame
 	void FixedUpdate ()
 	{
 		attractor.Attract(myTransform, gravity, rotation);
@@ -38,6 +38,9 @@ public class FauxGravityBody : MonoBehaviour
 
 
 	void limitSpeed_Strict()
+	/***
+	 * Changes the body's speed to speedLimit.
+	 */
 	{
 		Vector2 normalizedVelocity = myRigidBody2D.velocity.normalized;
 		myRigidBody2D.velocity = normalizedVelocity * speedLimit;
@@ -45,6 +48,9 @@ public class FauxGravityBody : MonoBehaviour
 	
 	
 	void LimitSpeed_Natural()
+	/**
+	 * Slows the body down to speedLimit by applying a breaking force.
+	 */
 	{
 		float breakSpeed = myRigidBody2D.velocity.magnitude - 2*speedLimit;
 		Vector2 normalizedVelocity = myRigidBody2D.velocity.normalized;
