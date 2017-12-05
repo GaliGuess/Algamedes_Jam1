@@ -16,6 +16,9 @@ public class PlayerScript : MonoBehaviour {
 	public Light playerLight;
 	public float lightReductionFactor = 0.9f;
 
+	public Rotator maze;
+	public SpriteRenderer playerSpriteRenderer;
+	
 	
 	void Start ()
 	{
@@ -30,6 +33,8 @@ public class PlayerScript : MonoBehaviour {
 			Vector2 webPos = Vector2.MoveTowards(rigidbody2d.position, web.transform.position, toWebSpeed * Time.fixedDeltaTime);
 			rigidbody2d.MovePosition(webPos);
 		}
+		if (maze.mazeRotationSpeed > 0) playerSpriteRenderer.flipX = true;
+		else playerSpriteRenderer.flipX = false;
 	}
 
 	
@@ -40,7 +45,13 @@ public class PlayerScript : MonoBehaviour {
 		playerLight.range *= lightReductionFactor;
 	}
 
+
+	public void flipPlayer()
+	{
+		playerSpriteRenderer.flipX = !playerSpriteRenderer.flipX;
+	}
 	
+
 	private void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.tag == "Enemy")

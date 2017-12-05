@@ -7,8 +7,7 @@ public class Rotator : MonoBehaviour
 	public KeyCode changeDirectionKey;
 	public bool changeDirection;
 	public float mazeRotationSpeed = 50f;
-	
-	
+		
 	void Start () {
 		
 	}
