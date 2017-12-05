@@ -50,6 +50,16 @@ public class PlayerScript : MonoBehaviour {
 	{
 		playerSpriteRenderer.flipX = !playerSpriteRenderer.flipX;
 	}
+
+
+	protected void turnRed()
+	{
+//		while (turnsToRed > 0)
+//		{
+//			playerSpriteRenderer.color()
+//		}
+		
+	}
 	
 
 	private void OnCollisionEnter2D(Collision2D other)
@@ -57,9 +67,23 @@ public class PlayerScript : MonoBehaviour {
 		if (other.gameObject.tag == "Enemy")
 		{
 			reduceHealth();
+			if (health == 0) endGame(other.gameObject);
 		}
 	}
 
+
+	public void endGame(GameObject killer)
+	{
+		EnemyScript enemy = killer.GetComponent<EnemyScript>();
+		transform.position = (killer.transform.position - transform.position) / 2;
+//		rigidbody2d.MovePosition(killer.transform.position / 2);
+		enemy.kill();
+		Debug.Log("No more health");
+		maze.stopRotation();
+		Destroy(gameObject);
+		// end the game
+	}
+	
 
 	public void OnTriggerEnter2D(Collider2D other)
 	{

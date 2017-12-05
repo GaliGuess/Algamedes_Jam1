@@ -46,7 +46,7 @@ public class FauxGravityAttractor : MonoBehaviour {
 	}
 
 
-	private bool compare(float x, float y)
+	public static bool compare(float x, float y)
 	/**
 	 * Compares floats to a epsilon precision.
 	 */

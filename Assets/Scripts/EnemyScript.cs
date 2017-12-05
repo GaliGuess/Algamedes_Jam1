@@ -11,18 +11,39 @@ public class EnemyScript : MonoBehaviour
 
 	public int curr_dest = 0;
 	public bool backwards;
-	public int prev_checkpoint;
+	private int prev_checkpoint;
 
 	private Transform myTransform;
 	public SpriteRenderer mySpriteRenderer;
+	private Animator animator;
+
+	public bool attack = false;
+	public string killAnimBoolParamName;
+	private int killAnimBoolParamId;
 
 	
 	void Start ()
 	{
 		myTransform = GetComponent<Transform>();
+		animator = GetComponentInChildren<Animator>();
+		killAnimBoolParamId = Animator.StringToHash(killAnimBoolParamName);
+		animator.SetBool(killAnimBoolParamId, attack);
 	}
 	
-	void FixedUpdate ()
+	void FixedUpdate()
+	{
+		if (!attack) moveToCheckpoint();
+	}
+
+
+	public void kill()
+	{
+		attack = true;
+		animator.SetBool(killAnimBoolParamId, attack);
+	}
+
+
+	protected void moveToCheckpoint()
 	{
 		if (!closeToCheckpoint(transform.position, checkpoints[curr_dest].position))
 		{
@@ -45,7 +66,7 @@ public class EnemyScript : MonoBehaviour
 			curr_dest = nextCheckpoint(curr_dest);
 		}
 	}
-
+	
 	
 	protected bool closeToCheckpoint(Vector3 myPos, Vector3 checkpointPos)
 	{

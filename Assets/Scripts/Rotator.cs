@@ -7,6 +7,8 @@ public class Rotator : MonoBehaviour
 	public KeyCode changeDirectionKey;
 	public bool changeDirection;
 	public float mazeRotationSpeed = 50f;
+	private bool isSlowingDown = false;
+	public float slowingFactor = 0.9f;
 		
 	void Start () {
 		
@@ -26,12 +28,21 @@ public class Rotator : MonoBehaviour
 	
 	void FixedUpdate () {
 		transform.Rotate(new Vector3(0, 0, Time.deltaTime * mazeRotationSpeed));
+		if (isSlowingDown)
+		{
+			if (!FauxGravityAttractor.compare(mazeRotationSpeed, 0f)) mazeRotationSpeed *= slowingFactor;
+		}
 	}
 
 
 	void changeRotation()
 	{
 		mazeRotationSpeed = -mazeRotationSpeed;
+	}
+
+	public void stopRotation()
+	{
+		isSlowingDown = true;
 	}
 	
 }
