@@ -1,13 +1,14 @@
 fileFormatVersion: 2
-guid: d3f9cb5cc708240619ee6f57b8ebb36d
-timeCreated: 1512505538
+guid: 30f116655d01a4c5b9a0e752c59b7cee
+timeCreated: 1512508482
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Death_0
-    21300002: Death_1
-    21300004: Death_2
-    21300006: Death_3
+    21300000: fireflyHurt_sprite_0
+    21300002: fireflyHurt_sprite_1
+    21300004: fireflyHurt_sprite_2
+    21300006: fireflyHurt_sprite_3
+    21300008: fireflyHurt_sprite_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -82,57 +83,71 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death_0
+      name: fireflyHurt_sprite_0
       rect:
         serializedVersion: 2
-        x: 74
+        x: 0
         y: 0
-        width: 642
-        height: 631
-      alignment: 9
-      pivot: {x: 0.3503084, y: 0.57877654}
+        width: 365
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Death_1
+      name: fireflyHurt_sprite_1
       rect:
         serializedVersion: 2
-        x: 723
+        x: 365
         y: 0
-        width: 626
-        height: 630
-      alignment: 9
-      pivot: {x: 0.30413273, y: 0.58416164}
+        width: 375
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Death_2
+      name: fireflyHurt_sprite_2
       rect:
         serializedVersion: 2
-        x: 1349
+        x: 740
         y: 0
-        width: 580
-        height: 630
-      alignment: 9
-      pivot: {x: 0.22574925, y: 0.5420808}
+        width: 305
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Death_3
+      name: fireflyHurt_sprite_3
       rect:
         serializedVersion: 2
-        x: 1914
+        x: 1064
         y: 0
-        width: 575
-        height: 631
+        width: 365
+        height: 391
       alignment: 9
-      pivot: {x: 0.21183828, y: 0.5420141}
+      pivot: {x: 0.5129806, y: 0.5121171}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fireflyHurt_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 0
+        width: 365
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

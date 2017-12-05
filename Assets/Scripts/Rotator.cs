@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/***
+ * Simplified controller for rotating an object. 
+ */
 public class Rotator : MonoBehaviour
 {
 	public KeyCode changeDirectionKey;
-	public bool changeDirection;
 	public float mazeRotationSpeed = 50f;
-	private bool isSlowingDown = false;
-	public float slowingFactor = 0.9f;
-		
-	void Start () {
-		
+	public bool changeDirection;
+	private bool isSlowingDown;
+	
+	void Start ()
+	{
+		isSlowingDown = false;
 	}
 	
-	
-	void Update () {
-
-		
+	void Update () {	
 		if (changeDirection || Input.GetKeyDown(changeDirectionKey))
 		{
 			changeRotation();
@@ -25,21 +25,22 @@ public class Rotator : MonoBehaviour
 		}
 	}
 	
-	
 	void FixedUpdate () {
 		transform.Rotate(new Vector3(0, 0, Time.deltaTime * mazeRotationSpeed));
-		if (isSlowingDown)
-		{
-			if (!FauxGravityAttractor.compare(mazeRotationSpeed, 0f)) mazeRotationSpeed *= slowingFactor;
-		}
+		if (isSlowingDown && mazeRotationSpeed > 0) mazeRotationSpeed -= 0.5f;
 	}
 
-
+	/**
+	 * Changes the direction of rotation.
+	 */
 	void changeRotation()
 	{
 		mazeRotationSpeed = -mazeRotationSpeed;
 	}
 
+	/**
+	 * Stops the rotation (gradually until zero)
+	 */
 	public void stopRotation()
 	{
 		isSlowingDown = true;

@@ -7,22 +7,36 @@ public class PlayerScript : MonoBehaviour {
 	public int health = 3;
 	public bool invulnerable = false;
 
+	// Spider web related
 	public int WebTurnsLeft = 0;
 	private GameObject web;
 	public int MaxTurnsInWeb = 100;
 	private int toWebSpeed = 4;
 
 	private Rigidbody2D rigidbody2d;
+	public SpriteRenderer playerSpriteRenderer;
+	public Rotator maze; // used to set the sprite's direction
+
+	// Used to animate the player when hurt
+	private Animator animator;
+	public bool hurt;
+	public int turnsToHurt;
+	public int turnsLeftToHurt = 0;
+	public string hurtAnimBoolParamName;
+	private int hurtAnimBoolParamId;
+	
 	public Light playerLight;
 	public float lightReductionFactor = 0.9f;
-
-	public Rotator maze;
-	public SpriteRenderer playerSpriteRenderer;
 	
 	
 	void Start ()
 	{
 		rigidbody2d = GetComponent<Rigidbody2D>();
+		animator = GetComponentInChildren<Animator>();
+		hurtAnimBoolParamId = Animator.StringToHash(hurtAnimBoolParamName);
+		hurt = false;
+		turnsLeftToHurt = 0;
+		animator.SetBool(hurtAnimBoolParamId, hurt);
 	}
 	
 	
@@ -35,30 +49,31 @@ public class PlayerScript : MonoBehaviour {
 		}
 		if (maze.mazeRotationSpeed > 0) playerSpriteRenderer.flipX = true;
 		else playerSpriteRenderer.flipX = false;
+
+		if (turnsLeftToHurt > 0) turnsLeftToHurt -= 1;
+		if (turnsLeftToHurt == 0) hurt = false;
+		animator.SetBool(hurtAnimBoolParamId, hurt);
 	}
 
-	
+	/**
+	 * Reduces the player's health
+	 */
 	protected void reduceHealth()
 	{
 		if (invulnerable) return;
 		health -= 1;
 		playerLight.range *= lightReductionFactor;
+		hurt = true;
+		turnsLeftToHurt = turnsToHurt;
+//		animator.SetBool(hurtAnimBoolParamId, hurt);
 	}
 
-
+	/***
+	 * Flips the player's sprite renderer on x axis
+	 */
 	public void flipPlayer()
 	{
 		playerSpriteRenderer.flipX = !playerSpriteRenderer.flipX;
-	}
-
-
-	protected void turnRed()
-	{
-//		while (turnsToRed > 0)
-//		{
-//			playerSpriteRenderer.color()
-//		}
-		
 	}
 	
 
@@ -68,22 +83,10 @@ public class PlayerScript : MonoBehaviour {
 		{
 			reduceHealth();
 			if (health == 0) endGame(other.gameObject);
+//			else turnRed();
 		}
 	}
-
-
-	public void endGame(GameObject killer)
-	{
-		EnemyScript enemy = killer.GetComponent<EnemyScript>();
-		transform.position = (killer.transform.position - transform.position) / 2;
-//		rigidbody2d.MovePosition(killer.transform.position / 2);
-		enemy.kill();
-		Debug.Log("No more health");
-		maze.stopRotation();
-		Destroy(gameObject);
-		// end the game
-	}
-	
+		
 
 	public void OnTriggerEnter2D(Collider2D other)
 	{
@@ -92,5 +95,20 @@ public class PlayerScript : MonoBehaviour {
 			WebTurnsLeft = MaxTurnsInWeb;
 			web = other.gameObject;
 		}
+	}
+	
+	/**
+	 * Things to do at the end of the game.
+	 */
+	public void endGame(GameObject killer)
+	{
+		EnemyScript enemy = killer.GetComponent<EnemyScript>();
+		transform.position = (killer.transform.position - transform.position) / 2;
+		enemy.kill();
+		Debug.Log("No more health");
+		maze.stopRotation();
+		GetComponentInParent<WorldController>().deactivateControls();
+		Destroy(gameObject);
+		// end the game
 	}
 }

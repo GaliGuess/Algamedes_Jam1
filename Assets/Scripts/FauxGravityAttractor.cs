@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using NUnit.Framework.Constraints;
 using UnityEngine;
 
+/**
+ * Attracts FauxGravityBody objects to it's center simulating gravity.
+ */
 public class FauxGravityAttractor : MonoBehaviour {
 
 	public float SPEED = 50f;
@@ -12,11 +15,11 @@ public class FauxGravityAttractor : MonoBehaviour {
 	public const float MIN_GRAVITY = 2f;
 	
 	
-	public void Attract(Transform body, bool gravity_on = true, bool rotation_on = true)
 	/**
 	 * This should be called by the FauxGravityBody so it will be pulled to the attractor.
 	 * Use the boolean variables to control if the body will be affected by gravity\rotation of the attractor.
 	 */
+	public void Attract(Transform body, bool gravity_on = true, bool rotation_on = true)
 	{
 		Vector2 gravityUp = (body.position - transform.position).normalized;
 		Vector2 bodyUp = body.up;
@@ -29,11 +32,10 @@ public class FauxGravityAttractor : MonoBehaviour {
 		}
 	}
 	
-	
-	public void changeGravityDirection()
 	/**
 	 * Changes the gravity direction in\out.
 	 */
+	public void changeGravityDirection()
 	{
 		if (compare(GRAVITY, MAX_GRAVITY))
 		{
@@ -45,11 +47,10 @@ public class FauxGravityAttractor : MonoBehaviour {
 		}
 	}
 
-
-	public static bool compare(float x, float y)
 	/**
 	 * Compares floats to a epsilon precision.
 	 */
+	public static bool compare(float x, float y)
 	{
 		float tolerance = 1E-07f;
 		return Math.Abs(x - y) < tolerance;

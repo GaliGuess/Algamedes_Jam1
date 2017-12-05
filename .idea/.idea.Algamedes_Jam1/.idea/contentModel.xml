@@ -33,6 +33,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="bgScript.cs" t="Include" />
           <e p="EnemyScript.cs" t="Include" />
           <e p="FauxGravityAttractor.cs" t="Include" />
           <e p="FauxGravityBody.cs" t="Include" />
