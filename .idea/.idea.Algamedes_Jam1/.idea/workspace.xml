@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4eb202bf-c5a1-4cf9-9ae6-9cd07fc17125" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Graphics/Animations/firefly_sprite_0.controller" afterPath="$PROJECT_DIR$/Assets/Graphics/Animations/firefly_sprite_0.controller" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Graphics/Animations/wasp_sprite_0.controller" afterPath="$PROJECT_DIR$/Assets/Graphics/Animations/wasp_sprite_0.controller" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scenes/Game2_WroldVsMaze.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Game2_WroldVsMaze.unity" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.Algamedes_Jam1/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Algamedes_Jam1/.idea/contentModel.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.Algamedes_Jam1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Algamedes_Jam1/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/Death.png.meta" afterPath="$PROJECT_DIR$/Assets/Graphics/Sprites/Death.png.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScript.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScript.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/FauxGravityAttractor.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/FauxGravityAttractor.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/FauxGravityBody.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/FauxGravityBody.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/LightFlicker.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/LightFlicker.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Rotator.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Rotator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/WorldController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldController.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EnemyScript.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EnemyScript.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScript.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
@@ -46,6 +37,122 @@
                 <marker date="1512513496154" expanded="true" signature="1892:2063" ph="{...}" />
                 <marker date="1512513496154" expanded="true" signature="2067:2125" ph="/* Flips the spriterenderer's x axis when needed ... */" />
                 <marker date="1512513496154" expanded="true" signature="2161:2529" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/WorldController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="70" column="36" lean-forward="false" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+              <folding>
+                <marker date="1512512909567" expanded="false" signature="6:78" ph="..." />
+                <marker date="1512512909567" expanded="true" signature="80:137" ph="/* Controller for rotating and activating gravity ... */" />
+                <marker date="1512512909567" expanded="true" signature="182:1523" ph="{...}" />
+                <marker date="1512512909567" expanded="true" signature="597:836" ph="{...}" />
+                <marker date="1512512909567" expanded="true" signature="614:833" ph="{...}" />
+                <marker date="1512512909567" expanded="true" signature="748:829" ph="{...}" />
+                <marker date="1512512909567" expanded="true" signature="860:939" ph="{...}" />
+                <marker date="1512512909567" expanded="true" signature="942:986" ph="/* changes the rotation direction ... */" />
+                <marker date="1512512909567" expanded="true" signature="1009:1057" ph="{...}" />
+                <marker date="1512512909567" expanded="true" signature="1061:1104" ph="/* Changes the gravity direction ... */" />
+                <marker date="1512512909567" expanded="true" signature="1126:1170" ph="{...}" />
+                <marker date="1512512909567" expanded="true" signature="1173:1241" ph="/* Used to allow flipping of the keys between the players ... */" />
+                <marker date="1512512909567" expanded="true" signature="1274:1416" ph="{...}" />
+                <marker date="1512512909567" expanded="true" signature="1294:1317" ph="{...}" />
+                <marker date="1512512909567" expanded="true" signature="1349:1385" ph="{...}" />
+                <marker date="1512512909567" expanded="true" signature="1419:1461" ph="/* deactivates the user controls ... */" />
+                <marker date="1512512909567" expanded="true" signature="1495:1521" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FauxGravityAttractor.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/FauxGravityAttractor.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <marker date="1512514592195" expanded="true" signature="6:32" ph="..." />
+                <marker date="1512514592195" expanded="true" signature="34:112" ph="/* Attracts FauxGravityBody objects to it's center simulating gravity. ... */" />
+                <marker date="1512514592195" expanded="true" signature="163:1385" ph="{...}" />
+                <marker date="1512514592195" expanded="true" signature="308:512" ph="/* This should be called by the FauxGravityBody so it will be pulled to the attractor. ... */" />
+                <marker date="1512514592195" expanded="true" signature="598:1000" ph="{...}" />
+                <marker date="1512514592195" expanded="true" signature="804:997" ph="{...}" />
+                <marker date="1512514592195" expanded="true" signature="1004:1054" ph="/* Changes the gravity direction in\out. ... */" />
+                <marker date="1512514592195" expanded="true" signature="1092:1210" ph="{...}" />
+                <marker date="1512514592195" expanded="true" signature="1132:1166" ph="{...}" />
+                <marker date="1512514592195" expanded="true" signature="1173:1207" ph="{...}" />
+                <marker date="1512514592195" expanded="true" signature="1213:1265" ph="/* Compares floats to a epsilon precision. ... */" />
+                <marker date="1512514592195" expanded="true" signature="1311:1383" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LightFlicker.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/LightFlicker.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding>
+                <marker date="1512512683130" expanded="false" signature="6:78" ph="..." />
+                <marker date="1512512683130" expanded="true" signature="80:122" ph="/* Used to make flickering lights ... */" />
+                <marker date="1512512683130" expanded="true" signature="165:647" ph="{...}" />
+                <marker date="1512512683130" expanded="true" signature="364:403" ph="{...}" />
+                <marker date="1512512683130" expanded="true" signature="421:456" ph="{...}" />
+                <marker date="1512512683130" expanded="true" signature="480:645" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rotator.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Rotator.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+              <folding>
+                <marker date="1512512632884" expanded="false" signature="6:78" ph="..." />
+                <marker date="1512512632884" expanded="true" signature="80:138" ph="/* Simplified controller for rotating an object. ... */" />
+                <marker date="1512512632884" expanded="true" signature="175:919" ph="{...}" />
+                <marker date="1512512632884" expanded="true" signature="328:359" ph="{...}" />
+                <marker date="1512512632884" expanded="true" signature="378:503" ph="{...}" />
+                <marker date="1512512632884" expanded="true" signature="443:500" ph="{...}" />
+                <marker date="1512512632884" expanded="true" signature="527:679" ph="{...}" />
+                <marker date="1512512632884" expanded="true" signature="682:729" ph="/* Changes the direction of rotation. ... */" />
+                <marker date="1512512632884" expanded="true" signature="752:800" ph="{...}" />
+                <marker date="1512512632884" expanded="true" signature="803:857" ph="/* Stops the rotation (gradually until zero) ... */" />
+                <marker date="1512512632884" expanded="true" signature="885:915" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerScript.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+              <folding>
+                <marker date="1512513110317" expanded="false" signature="6:78" ph="..." />
+                <marker date="1512513110317" expanded="true" signature="122:2711" ph="{...}" />
+                <marker date="1512513110317" expanded="true" signature="774:1030" ph="{...}" />
+                <marker date="1512513110317" expanded="true" signature="1056:1524" ph="{...}" />
+                <marker date="1512513110317" expanded="true" signature="1082:1270" ph="{...}" />
+                <marker date="1512513110317" expanded="true" signature="1527:1567" ph="/* Reduces the player's health ... */" />
+                <marker date="1512513110317" expanded="true" signature="1598:1789" ph="{...}" />
+                <marker date="1512513110317" expanded="true" signature="1792:1850" ph="/* Flips the player's sprite renderer on x axis ... */" />
+                <marker date="1512513110317" expanded="true" signature="1876:1942" ph="{...}" />
+                <marker date="1512513110317" expanded="true" signature="1997:2137" ph="{...}" />
+                <marker date="1512513110317" expanded="true" signature="2039:2134" ph="{...}" />
+                <marker date="1512513110317" expanded="true" signature="2189:2300" ph="{...}" />
+                <marker date="1512513110317" expanded="true" signature="2229:2297" ph="{...}" />
+                <marker date="1512513110317" expanded="true" signature="2304:2353" ph="/* Things to do at the end of the game. ... */" />
+                <marker date="1512513110317" expanded="true" signature="2393:2709" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -94,8 +201,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FauxGravityBody.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FauxGravityAttractor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/bgScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FauxGravityAttractor.cs" />
       </list>
     </option>
   </component>
@@ -194,12 +301,12 @@
       <workItem from="1512390021184" duration="6069000" />
       <workItem from="1512425533403" duration="3438000" />
       <workItem from="1512476060473" duration="4618000" />
-      <workItem from="1512488409461" duration="17425000" />
+      <workItem from="1512488409461" duration="17775000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46810000" />
+    <option name="totallyTimeSpent" value="47160000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -298,7 +405,7 @@
         <state relative-caret-position="180">
           <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding>
-            <marker date="1512512683130" expanded="true" signature="6:78" ph="..." />
+            <marker date="1512512683130" expanded="false" signature="6:78" ph="..." />
             <marker date="1512512683130" expanded="true" signature="80:122" ph="/* Used to make flickering lights ... */" />
             <marker date="1512512683130" expanded="true" signature="165:647" ph="{...}" />
             <marker date="1512512683130" expanded="true" signature="364:403" ph="{...}" />
@@ -313,7 +420,7 @@
         <state relative-caret-position="105">
           <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
           <folding>
-            <marker date="1512512632884" expanded="true" signature="6:78" ph="..." />
+            <marker date="1512512632884" expanded="false" signature="6:78" ph="..." />
             <marker date="1512512632884" expanded="true" signature="80:138" ph="/* Simplified controller for rotating an object. ... */" />
             <marker date="1512512632884" expanded="true" signature="175:919" ph="{...}" />
             <marker date="1512512632884" expanded="true" signature="328:359" ph="{...}" />
@@ -376,7 +483,7 @@
         <state relative-caret-position="405">
           <caret line="29" column="57" lean-forward="false" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
           <folding>
-            <marker date="1512512909567" expanded="true" signature="6:78" ph="..." />
+            <marker date="1512512909567" expanded="false" signature="6:78" ph="..." />
             <marker date="1512512909567" expanded="true" signature="80:137" ph="/* Controller for rotating and activating gravity ... */" />
             <marker date="1512512909567" expanded="true" signature="182:1523" ph="{...}" />
             <marker date="1512512909567" expanded="true" signature="597:836" ph="{...}" />
@@ -426,7 +533,7 @@
         <state relative-caret-position="435">
           <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
-            <marker date="1512512909567" expanded="true" signature="6:78" ph="..." />
+            <marker date="1512512909567" expanded="false" signature="6:78" ph="..." />
             <marker date="1512512909567" expanded="true" signature="80:137" ph="/* Controller for rotating and activating gravity ... */" />
             <marker date="1512512909567" expanded="true" signature="182:1523" ph="{...}" />
             <marker date="1512512909567" expanded="true" signature="597:836" ph="{...}" />
@@ -452,7 +559,7 @@
         <state relative-caret-position="180">
           <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding>
-            <marker date="1512512683130" expanded="true" signature="6:78" ph="..." />
+            <marker date="1512512683130" expanded="false" signature="6:78" ph="..." />
             <marker date="1512512683130" expanded="true" signature="80:122" ph="/* Used to make flickering lights ... */" />
             <marker date="1512512683130" expanded="true" signature="165:647" ph="{...}" />
             <marker date="1512512683130" expanded="true" signature="364:403" ph="{...}" />
@@ -467,7 +574,7 @@
         <state relative-caret-position="255">
           <caret line="19" column="68" lean-forward="false" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
           <folding>
-            <marker date="1512512632884" expanded="true" signature="6:78" ph="..." />
+            <marker date="1512512632884" expanded="false" signature="6:78" ph="..." />
             <marker date="1512512632884" expanded="true" signature="80:138" ph="/* Simplified controller for rotating an object. ... */" />
             <marker date="1512512632884" expanded="true" signature="175:919" ph="{...}" />
             <marker date="1512512632884" expanded="true" signature="328:359" ph="{...}" />
@@ -554,7 +661,7 @@
         <state relative-caret-position="435">
           <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
-            <marker date="1512512909567" expanded="true" signature="6:78" ph="..." />
+            <marker date="1512512909567" expanded="false" signature="6:78" ph="..." />
             <marker date="1512512909567" expanded="true" signature="80:137" ph="/* Controller for rotating and activating gravity ... */" />
             <marker date="1512512909567" expanded="true" signature="182:1523" ph="{...}" />
             <marker date="1512512909567" expanded="true" signature="597:836" ph="{...}" />
@@ -580,7 +687,7 @@
         <state relative-caret-position="180">
           <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding>
-            <marker date="1512512683130" expanded="true" signature="6:78" ph="..." />
+            <marker date="1512512683130" expanded="false" signature="6:78" ph="..." />
             <marker date="1512512683130" expanded="true" signature="80:122" ph="/* Used to make flickering lights ... */" />
             <marker date="1512512683130" expanded="true" signature="165:647" ph="{...}" />
             <marker date="1512512683130" expanded="true" signature="364:403" ph="{...}" />
@@ -595,7 +702,7 @@
         <state relative-caret-position="255">
           <caret line="19" column="68" lean-forward="false" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
           <folding>
-            <marker date="1512512632884" expanded="true" signature="6:78" ph="..." />
+            <marker date="1512512632884" expanded="false" signature="6:78" ph="..." />
             <marker date="1512512632884" expanded="true" signature="80:138" ph="/* Simplified controller for rotating an object. ... */" />
             <marker date="1512512632884" expanded="true" signature="175:919" ph="{...}" />
             <marker date="1512512632884" expanded="true" signature="328:359" ph="{...}" />
@@ -702,7 +809,7 @@
         <state relative-caret-position="255">
           <caret line="19" column="68" lean-forward="false" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
           <folding>
-            <marker date="1512512632884" expanded="true" signature="6:78" ph="..." />
+            <marker date="1512512632884" expanded="false" signature="6:78" ph="..." />
             <marker date="1512512632884" expanded="true" signature="80:138" ph="/* Simplified controller for rotating an object. ... */" />
             <marker date="1512512632884" expanded="true" signature="175:919" ph="{...}" />
             <marker date="1512512632884" expanded="true" signature="328:359" ph="{...}" />
@@ -804,7 +911,7 @@
         <state relative-caret-position="255">
           <caret line="19" column="68" lean-forward="false" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
           <folding>
-            <marker date="1512512632884" expanded="true" signature="6:78" ph="..." />
+            <marker date="1512512632884" expanded="false" signature="6:78" ph="..." />
             <marker date="1512512632884" expanded="true" signature="80:138" ph="/* Simplified controller for rotating an object. ... */" />
             <marker date="1512512632884" expanded="true" signature="175:919" ph="{...}" />
             <marker date="1512512632884" expanded="true" signature="328:359" ph="{...}" />
@@ -935,91 +1042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Rotator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding>
-            <marker date="1512512632884" expanded="true" signature="6:78" ph="..." />
-            <marker date="1512512632884" expanded="true" signature="80:138" ph="/* Simplified controller for rotating an object. ... */" />
-            <marker date="1512512632884" expanded="true" signature="175:919" ph="{...}" />
-            <marker date="1512512632884" expanded="true" signature="328:359" ph="{...}" />
-            <marker date="1512512632884" expanded="true" signature="378:503" ph="{...}" />
-            <marker date="1512512632884" expanded="true" signature="443:500" ph="{...}" />
-            <marker date="1512512632884" expanded="true" signature="527:679" ph="{...}" />
-            <marker date="1512512632884" expanded="true" signature="682:729" ph="/* Changes the direction of rotation. ... */" />
-            <marker date="1512512632884" expanded="true" signature="752:800" ph="{...}" />
-            <marker date="1512512632884" expanded="true" signature="803:857" ph="/* Stops the rotation (gradually until zero) ... */" />
-            <marker date="1512512632884" expanded="true" signature="885:915" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LightFlicker.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <marker date="1512512683130" expanded="true" signature="6:78" ph="..." />
-            <marker date="1512512683130" expanded="true" signature="80:122" ph="/* Used to make flickering lights ... */" />
-            <marker date="1512512683130" expanded="true" signature="165:647" ph="{...}" />
-            <marker date="1512512683130" expanded="true" signature="364:403" ph="{...}" />
-            <marker date="1512512683130" expanded="true" signature="421:456" ph="{...}" />
-            <marker date="1512512683130" expanded="true" signature="480:645" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/WorldController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="781">
-          <caret line="70" column="36" lean-forward="false" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
-          <folding>
-            <marker date="1512512909567" expanded="true" signature="6:78" ph="..." />
-            <marker date="1512512909567" expanded="true" signature="80:137" ph="/* Controller for rotating and activating gravity ... */" />
-            <marker date="1512512909567" expanded="true" signature="182:1523" ph="{...}" />
-            <marker date="1512512909567" expanded="true" signature="597:836" ph="{...}" />
-            <marker date="1512512909567" expanded="true" signature="614:833" ph="{...}" />
-            <marker date="1512512909567" expanded="true" signature="748:829" ph="{...}" />
-            <marker date="1512512909567" expanded="true" signature="860:939" ph="{...}" />
-            <marker date="1512512909567" expanded="true" signature="942:986" ph="/* changes the rotation direction ... */" />
-            <marker date="1512512909567" expanded="true" signature="1009:1057" ph="{...}" />
-            <marker date="1512512909567" expanded="true" signature="1061:1104" ph="/* Changes the gravity direction ... */" />
-            <marker date="1512512909567" expanded="true" signature="1126:1170" ph="{...}" />
-            <marker date="1512512909567" expanded="true" signature="1173:1241" ph="/* Used to allow flipping of the keys between the players ... */" />
-            <marker date="1512512909567" expanded="true" signature="1274:1416" ph="{...}" />
-            <marker date="1512512909567" expanded="true" signature="1294:1317" ph="{...}" />
-            <marker date="1512512909567" expanded="true" signature="1349:1385" ph="{...}" />
-            <marker date="1512512909567" expanded="true" signature="1419:1461" ph="/* deactivates the user controls ... */" />
-            <marker date="1512512909567" expanded="true" signature="1495:1521" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-          <folding>
-            <marker date="1512513110317" expanded="false" signature="6:78" ph="..." />
-            <marker date="1512513110317" expanded="true" signature="122:2711" ph="{...}" />
-            <marker date="1512513110317" expanded="true" signature="774:1030" ph="{...}" />
-            <marker date="1512513110317" expanded="true" signature="1056:1524" ph="{...}" />
-            <marker date="1512513110317" expanded="true" signature="1082:1270" ph="{...}" />
-            <marker date="1512513110317" expanded="true" signature="1527:1567" ph="/* Reduces the player's health ... */" />
-            <marker date="1512513110317" expanded="true" signature="1598:1789" ph="{...}" />
-            <marker date="1512513110317" expanded="true" signature="1792:1850" ph="/* Flips the player's sprite renderer on x axis ... */" />
-            <marker date="1512513110317" expanded="true" signature="1876:1942" ph="{...}" />
-            <marker date="1512513110317" expanded="true" signature="1997:2137" ph="{...}" />
-            <marker date="1512513110317" expanded="true" signature="2039:2134" ph="{...}" />
-            <marker date="1512513110317" expanded="true" signature="2189:2300" ph="{...}" />
-            <marker date="1512513110317" expanded="true" signature="2229:2297" ph="{...}" />
-            <marker date="1512513110317" expanded="true" signature="2304:2353" ph="/* Things to do at the end of the game. ... */" />
-            <marker date="1512513110317" expanded="true" signature="2393:2709" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/FauxGravityBody.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1035,27 +1057,6 @@
             <marker date="1512513637104" expanded="true" signature="1189:1321" ph="{...}" />
             <marker date="1512513637104" expanded="true" signature="1325:1401" ph="/* Slows the body down to speedLimit by applying a breaking force. ... */" />
             <marker date="1512513637104" expanded="true" signature="1428:1667" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/FauxGravityAttractor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <marker date="1512513705091" expanded="true" signature="6:127" ph="..." />
-            <marker date="1512513705091" expanded="true" signature="129:207" ph="/* Attracts FauxGravityBody objects to it's center simulating gravity. ... */" />
-            <marker date="1512513705091" expanded="true" signature="258:1480" ph="{...}" />
-            <marker date="1512513705091" expanded="true" signature="403:607" ph="/* This should be called by the FauxGravityBody so it will be pulled to the attractor. ... */" />
-            <marker date="1512513705091" expanded="true" signature="693:1095" ph="{...}" />
-            <marker date="1512513705091" expanded="true" signature="899:1092" ph="{...}" />
-            <marker date="1512513705091" expanded="true" signature="1099:1149" ph="/* Changes the gravity direction in\out. ... */" />
-            <marker date="1512513705091" expanded="true" signature="1187:1305" ph="{...}" />
-            <marker date="1512513705091" expanded="true" signature="1227:1261" ph="{...}" />
-            <marker date="1512513705091" expanded="true" signature="1268:1302" ph="{...}" />
-            <marker date="1512513705091" expanded="true" signature="1308:1360" ph="/* Compares floats to a epsilon precision. ... */" />
-            <marker date="1512513705091" expanded="true" signature="1406:1478" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1093,6 +1094,112 @@
             <marker date="1512513496154" expanded="true" signature="1892:2063" ph="{...}" />
             <marker date="1512513496154" expanded="true" signature="2067:2125" ph="/* Flips the spriterenderer's x axis when needed ... */" />
             <marker date="1512513496154" expanded="true" signature="2161:2529" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LightFlicker.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <marker date="1512512683130" expanded="false" signature="6:78" ph="..." />
+            <marker date="1512512683130" expanded="true" signature="80:122" ph="/* Used to make flickering lights ... */" />
+            <marker date="1512512683130" expanded="true" signature="165:647" ph="{...}" />
+            <marker date="1512512683130" expanded="true" signature="364:403" ph="{...}" />
+            <marker date="1512512683130" expanded="true" signature="421:456" ph="{...}" />
+            <marker date="1512512683130" expanded="true" signature="480:645" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+          <folding>
+            <marker date="1512513110317" expanded="false" signature="6:78" ph="..." />
+            <marker date="1512513110317" expanded="true" signature="122:2711" ph="{...}" />
+            <marker date="1512513110317" expanded="true" signature="774:1030" ph="{...}" />
+            <marker date="1512513110317" expanded="true" signature="1056:1524" ph="{...}" />
+            <marker date="1512513110317" expanded="true" signature="1082:1270" ph="{...}" />
+            <marker date="1512513110317" expanded="true" signature="1527:1567" ph="/* Reduces the player's health ... */" />
+            <marker date="1512513110317" expanded="true" signature="1598:1789" ph="{...}" />
+            <marker date="1512513110317" expanded="true" signature="1792:1850" ph="/* Flips the player's sprite renderer on x axis ... */" />
+            <marker date="1512513110317" expanded="true" signature="1876:1942" ph="{...}" />
+            <marker date="1512513110317" expanded="true" signature="1997:2137" ph="{...}" />
+            <marker date="1512513110317" expanded="true" signature="2039:2134" ph="{...}" />
+            <marker date="1512513110317" expanded="true" signature="2189:2300" ph="{...}" />
+            <marker date="1512513110317" expanded="true" signature="2229:2297" ph="{...}" />
+            <marker date="1512513110317" expanded="true" signature="2304:2353" ph="/* Things to do at the end of the game. ... */" />
+            <marker date="1512513110317" expanded="true" signature="2393:2709" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Rotator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <marker date="1512512632884" expanded="false" signature="6:78" ph="..." />
+            <marker date="1512512632884" expanded="true" signature="80:138" ph="/* Simplified controller for rotating an object. ... */" />
+            <marker date="1512512632884" expanded="true" signature="175:919" ph="{...}" />
+            <marker date="1512512632884" expanded="true" signature="328:359" ph="{...}" />
+            <marker date="1512512632884" expanded="true" signature="378:503" ph="{...}" />
+            <marker date="1512512632884" expanded="true" signature="443:500" ph="{...}" />
+            <marker date="1512512632884" expanded="true" signature="527:679" ph="{...}" />
+            <marker date="1512512632884" expanded="true" signature="682:729" ph="/* Changes the direction of rotation. ... */" />
+            <marker date="1512512632884" expanded="true" signature="752:800" ph="{...}" />
+            <marker date="1512512632884" expanded="true" signature="803:857" ph="/* Stops the rotation (gradually until zero) ... */" />
+            <marker date="1512512632884" expanded="true" signature="885:915" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/WorldController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="70" column="36" lean-forward="false" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+          <folding>
+            <marker date="1512512909567" expanded="false" signature="6:78" ph="..." />
+            <marker date="1512512909567" expanded="true" signature="80:137" ph="/* Controller for rotating and activating gravity ... */" />
+            <marker date="1512512909567" expanded="true" signature="182:1523" ph="{...}" />
+            <marker date="1512512909567" expanded="true" signature="597:836" ph="{...}" />
+            <marker date="1512512909567" expanded="true" signature="614:833" ph="{...}" />
+            <marker date="1512512909567" expanded="true" signature="748:829" ph="{...}" />
+            <marker date="1512512909567" expanded="true" signature="860:939" ph="{...}" />
+            <marker date="1512512909567" expanded="true" signature="942:986" ph="/* changes the rotation direction ... */" />
+            <marker date="1512512909567" expanded="true" signature="1009:1057" ph="{...}" />
+            <marker date="1512512909567" expanded="true" signature="1061:1104" ph="/* Changes the gravity direction ... */" />
+            <marker date="1512512909567" expanded="true" signature="1126:1170" ph="{...}" />
+            <marker date="1512512909567" expanded="true" signature="1173:1241" ph="/* Used to allow flipping of the keys between the players ... */" />
+            <marker date="1512512909567" expanded="true" signature="1274:1416" ph="{...}" />
+            <marker date="1512512909567" expanded="true" signature="1294:1317" ph="{...}" />
+            <marker date="1512512909567" expanded="true" signature="1349:1385" ph="{...}" />
+            <marker date="1512512909567" expanded="true" signature="1419:1461" ph="/* deactivates the user controls ... */" />
+            <marker date="1512512909567" expanded="true" signature="1495:1521" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/FauxGravityAttractor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1512514592195" expanded="true" signature="6:32" ph="..." />
+            <marker date="1512514592195" expanded="true" signature="34:112" ph="/* Attracts FauxGravityBody objects to it's center simulating gravity. ... */" />
+            <marker date="1512514592195" expanded="true" signature="163:1385" ph="{...}" />
+            <marker date="1512514592195" expanded="true" signature="308:512" ph="/* This should be called by the FauxGravityBody so it will be pulled to the attractor. ... */" />
+            <marker date="1512514592195" expanded="true" signature="598:1000" ph="{...}" />
+            <marker date="1512514592195" expanded="true" signature="804:997" ph="{...}" />
+            <marker date="1512514592195" expanded="true" signature="1004:1054" ph="/* Changes the gravity direction in\out. ... */" />
+            <marker date="1512514592195" expanded="true" signature="1092:1210" ph="{...}" />
+            <marker date="1512514592195" expanded="true" signature="1132:1166" ph="{...}" />
+            <marker date="1512514592195" expanded="true" signature="1173:1207" ph="{...}" />
+            <marker date="1512514592195" expanded="true" signature="1213:1265" ph="/* Compares floats to a epsilon precision. ... */" />
+            <marker date="1512514592195" expanded="true" signature="1311:1383" ph="{...}" />
           </folding>
         </state>
       </provider>
