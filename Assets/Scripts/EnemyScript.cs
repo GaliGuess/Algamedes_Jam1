@@ -14,8 +14,8 @@ public class EnemyScript : MonoBehaviour
 	public int prev_checkpoint;
 
 	private Transform myTransform;
-	private Rigidbody2D myRigidbody2D;
-	public SpriteRenderer MySpriteRenderer;
+	public SpriteRenderer mySpriteRenderer;
+
 	
 	void Start ()
 	{
@@ -28,20 +28,22 @@ public class EnemyScript : MonoBehaviour
 		{
 			Vector2 pos = Vector3.MoveTowards(transform.position, checkpoints[curr_dest].position, speed * Time.fixedDeltaTime);
 			myTransform.position = pos;
-			
-			
+
 			// Change animation direction if needed
-//			Vector2 toCenter = new Vector3(0, 0, 0) - transform.position;
-//			Vector2 toCheckpoint = checkpoints[curr_dest].position - transform.position;
-//			
-//			float angle = Vector2.Angle(toCenter, toCheckpoint);
-//			Vector3 cross = Vector3.Cross(toCheckpoint, toCenter);
-//			if (cross.z > 0) angle = 360 - angle;
-//			
-////			Debug.Log(angle);
-//			if (angle > 180 && angle < 360) MySpriteRenderer.flipX = !MySpriteRenderer.flipX;
+			Vector2 toNewCp = checkpoints[curr_dest].localPosition;
+			Vector2 toPrevCp = checkpoints[prev_checkpoint].localPosition;
+			Vector2 localDirection = toNewCp - toPrevCp;
+
+			if (localDirection.x < 0) mySpriteRenderer.flipX = false;
+			else mySpriteRenderer.flipX = true;
+			
+			if (myTransform.localPosition.y < 0) mySpriteRenderer.flipX = !mySpriteRenderer.flipX;
 		}
-		else curr_dest = nextCheckpoint(curr_dest);
+		else
+		{
+			prev_checkpoint = curr_dest;
+			curr_dest = nextCheckpoint(curr_dest);
+		}
 	}
 
 	

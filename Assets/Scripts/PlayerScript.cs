@@ -13,6 +13,8 @@ public class PlayerScript : MonoBehaviour {
 	private int toWebSpeed = 4;
 
 	private Rigidbody2D rigidbody2d;
+	public Light playerLight;
+	public float lightReductionFactor = 0.9f;
 
 	
 	void Start ()
@@ -35,6 +37,7 @@ public class PlayerScript : MonoBehaviour {
 	{
 		if (invulnerable) return;
 		health -= 1;
+		playerLight.range *= lightReductionFactor;
 	}
 
 	
