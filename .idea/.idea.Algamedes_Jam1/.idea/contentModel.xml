@@ -40,13 +40,16 @@
           <e p="lightFlicker.cs" t="Include" />
           <e p="PlayerScript.cs" t="Include" />
           <e p="Rotator.cs" t="Include" />
+          <e p="WebAnim.cs" t="Include" />
           <e p="WorldController.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
     </e>
   </component>
 </project>

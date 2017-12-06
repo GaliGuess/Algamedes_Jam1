@@ -7,6 +7,10 @@ public class PlayerScript : MonoBehaviour {
 	public int health = 3;
 	public bool invulnerable = false;
 
+	public bool endOfGame;
+	public int turnsBeforeClosing = 150;
+	public int turnsLeftToClose = 0;
+
 	// Spider web related
 	public int WebTurnsLeft = 0;
 	private GameObject web;
@@ -37,22 +41,31 @@ public class PlayerScript : MonoBehaviour {
 		hurt = false;
 		turnsLeftToHurt = 0;
 		animator.SetBool(hurtAnimBoolParamId, hurt);
+		endOfGame = false;
 	}
 	
 	
 	void FixedUpdate () {
-		if (WebTurnsLeft != 0)
+		if (endOfGame)
 		{
-			WebTurnsLeft -= 1;
-			Vector2 webPos = Vector2.MoveTowards(rigidbody2d.position, web.transform.position, toWebSpeed * Time.fixedDeltaTime);
-			rigidbody2d.MovePosition(webPos);
+			if (turnsLeftToClose == 0) Application.Quit();
+			else turnsLeftToClose -= 1;
 		}
-		if (maze.mazeRotationSpeed > 0) playerSpriteRenderer.flipX = true;
-		else playerSpriteRenderer.flipX = false;
+		else
+		{
+			if (WebTurnsLeft != 0)
+			{
+				WebTurnsLeft -= 1;
+				Vector2 webPos = Vector2.MoveTowards(rigidbody2d.position, web.transform.position, toWebSpeed * Time.fixedDeltaTime);
+				rigidbody2d.MovePosition(webPos);
+			}
+			if (maze.mazeRotationSpeed > 0) playerSpriteRenderer.flipX = true;
+			else playerSpriteRenderer.flipX = false;
 
-		if (turnsLeftToHurt > 0) turnsLeftToHurt -= 1;
-		if (turnsLeftToHurt == 0) hurt = false;
-		animator.SetBool(hurtAnimBoolParamId, hurt);
+			if (turnsLeftToHurt > 0) turnsLeftToHurt -= 1;
+			if (turnsLeftToHurt == 0) hurt = false;
+			animator.SetBool(hurtAnimBoolParamId, hurt);
+		}
 	}
 
 	/**
@@ -65,7 +78,6 @@ public class PlayerScript : MonoBehaviour {
 		playerLight.range *= lightReductionFactor;
 		hurt = true;
 		turnsLeftToHurt = turnsToHurt;
-//		animator.SetBool(hurtAnimBoolParamId, hurt);
 	}
 
 	/***
@@ -81,34 +93,53 @@ public class PlayerScript : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Enemy")
 		{
+			Debug.Log("Stung by wasp");
 			reduceHealth();
-			if (health == 0) endGame(other.gameObject);
-//			else turnRed();
+			if (health == 0) loseGame(other.gameObject);
 		}
 	}
-		
+
 
 	public void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Web")
 		{
+			Debug.Log("Caught in web");
+			other.gameObject.GetComponent<WebAnim>().activateAnim();
 			WebTurnsLeft = MaxTurnsInWeb;
 			web = other.gameObject;
+		}
+		if (other.gameObject.tag == "Winner")
+		{
+			Debug.Log("You've Won!!");
+			endGame();
 		}
 	}
 	
 	/**
 	 * Things to do at the end of the game.
 	 */
-	public void endGame(GameObject killer)
+	public void loseGame(GameObject killer)
 	{
 		EnemyScript enemy = killer.GetComponent<EnemyScript>();
 		transform.position = (killer.transform.position - transform.position) / 2;
+		playerLight.enabled = false;
 		enemy.kill();
 		Debug.Log("No more health");
 		maze.stopRotation();
+		Destroy(playerSpriteRenderer);
+//		Destroy(gameObject);
+		endGame();
+	}
+
+	/**
+	 * ends the game.
+	 */
+	private void endGame()
+	{
+		Debug.Log("Bye bye...");
 		GetComponentInParent<WorldController>().deactivateControls();
-		Destroy(gameObject);
-		// end the game
+		endOfGame = true;
+		turnsLeftToClose = turnsBeforeClosing;
 	}
 }
