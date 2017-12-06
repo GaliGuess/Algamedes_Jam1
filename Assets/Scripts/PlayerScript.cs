@@ -9,7 +9,9 @@ public class PlayerScript : MonoBehaviour {
 
 	public bool endOfGame;
 	public int turnsBeforeClosing = 150;
+	public int turnsBeforeFading = 40;
 	public int turnsLeftToClose = 0;
+	public FadeScreen fade;
 
 	// Spider web related
 	public int WebTurnsLeft = 0;
@@ -20,6 +22,7 @@ public class PlayerScript : MonoBehaviour {
 	private Rigidbody2D rigidbody2d;
 	public SpriteRenderer playerSpriteRenderer;
 	public Rotator maze; // used to set the sprite's direction
+	private BoxCollider2D myCollider;
 
 	// Used to animate the player when hurt
 	private Animator animator;
@@ -36,6 +39,7 @@ public class PlayerScript : MonoBehaviour {
 	void Start ()
 	{
 		rigidbody2d = GetComponent<Rigidbody2D>();
+		myCollider = GetComponentInChildren<BoxCollider2D>();
 		animator = GetComponentInChildren<Animator>();
 		hurtAnimBoolParamId = Animator.StringToHash(hurtAnimBoolParamName);
 		hurt = false;
@@ -50,6 +54,7 @@ public class PlayerScript : MonoBehaviour {
 		{
 			if (turnsLeftToClose == 0) Application.Quit();
 			else turnsLeftToClose -= 1;
+			if (turnsLeftToClose == turnsBeforeFading) fade.fade();
 		}
 		else
 		{
@@ -112,6 +117,7 @@ public class PlayerScript : MonoBehaviour {
 		if (other.gameObject.tag == "Winner")
 		{
 			Debug.Log("You've Won!!");
+			fade.setColor(Color.white);
 			endGame();
 		}
 	}
@@ -124,11 +130,12 @@ public class PlayerScript : MonoBehaviour {
 		EnemyScript enemy = killer.GetComponent<EnemyScript>();
 		transform.position = (killer.transform.position - transform.position) / 2;
 		playerLight.enabled = false;
+		myCollider.enabled = false;
+		playerSpriteRenderer.enabled = false;
 		enemy.kill();
 		Debug.Log("No more health");
 		maze.stopRotation();
-		Destroy(playerSpriteRenderer);
-//		Destroy(gameObject);
+		fade.setColor(Color.black);
 		endGame();
 	}
 
